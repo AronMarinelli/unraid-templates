@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bitwarden-secure-sync</Name>
+  <Repository>aronmarinelli/bitwarden-secure-sync:latest</Repository>
+  <Registry>https://hub.docker.com/r/aronmarinelli/bitwarden-secure-sync/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/156283-support-bitwarden-secure-sync</Support>
+  <Project>https://github.com/AronMarinelli/bitwarden-secure-sync</Project>
+  <Overview>A simple tool that can be used to export your Bitwarden vault to a local file periodically. Uses the Bitwarden CLI tool to communicate with the API, and exports your passwords using the default Bitwarden export method.</Overview>
+  <Category>Backup: Security: Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/AronMarinelli/unraid-templates/master/icons/bitwarden-secure-sync.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1709475962</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Configuration directory" Target="/app/config" Default="/mnt/user/appdata/bitwarden-secure-sync/config" Mode="rw" Description="The configuration directory used for setting up the application.&#13;&#10;&#13;&#10;A default appsettings.json file will be created in this directory upon inital run, after which it will require further manual configuration." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitwarden-secure-sync/config</Config>
+  <Config Name="Data directory" Target="/app/data" Default="/mnt/user/appdata/bitwarden-secure-sync/data" Mode="rw" Description="The default data directory used by the application. By default, the Bitwarden CLI will export your data here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bitwarden-secure-sync/data</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
